@@ -1,6 +1,7 @@
 
 package org.usfirst.frc.team2509.robot;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -10,6 +11,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team2509.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team2509.robot.subsystems.ExampleSubsystem;
+import org.usfirst.frc.team2509.robot.subsystems.Solenoid;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -21,6 +23,7 @@ import org.usfirst.frc.team2509.robot.subsystems.ExampleSubsystem;
 public class Robot extends IterativeRobot {
 
 	public static final DriveTrain drivetrain = new DriveTrain();
+	public static final Solenoid solenoid = new Solenoid();
 	public static OI oi;
 
 	Command autonomousCommand;
@@ -104,6 +107,7 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void teleopPeriodic() {
 		drivetrain.Drive();
+		solenoid.shift();
 	}
 
 	/**

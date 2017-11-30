@@ -13,7 +13,7 @@ public class RobotMap {
 	public static Talon DriveLeft1 = new Talon (0);
 	public static Talon DriveRight1 = new Talon (1);
 	public static RobotDrive robotdrive = new RobotDrive(DriveLeft1,DriveRight1);
-	public static DoubleSolenoid leftSolenoid = new DoubleSolenoid(0,1);
+	public static DoubleSolenoid Solenoid = new DoubleSolenoid(0,1);
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.
 	// public static int leftMotor = 1;
